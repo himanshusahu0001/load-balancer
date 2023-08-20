@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<style>
+    body {
+        padding: 0% 1%;
+    }
+</style>
+
+<body>
+
+
+
+    <h1 class="display-3"> <strong> Load Balancer </strong></h1>
+    <p>Make Api calls from here or by typing in the address/url bar.</p>
+
+    <div class="d-grid gap-2 col-4 ">
+        <a class="btn btn-outline-success" role="button" href="/api/v1/hello">GET /api/v1/hello</a>
+        <a class="btn btn-outline-success" role="button" href="/worker/stats">GET /worker/stats </a>
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <h1 class="display-3"> <strong>Configuration Manager </strong> </h1>
+
+    <div class="row">
+        <div class="col-md-5 ">
+            <h5>Current Configuration</h5>
+
+            <table class="table table-sm table-bordered border-success">
+                <thead class="">
+                    <tr>
+                        <th scope="col">Property</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Number of workers</td>
+                        <td> {{ data['number_of_workers'] }} </td>
+                    </tr>
+
+                    <tr>
+                        <td>Average Delay in sec </td>
+                        <td> {{ data['average_delay'] }} </td>
+                    </tr>
+
+                    <tr>
+                        <td>Failure percentage </td>
+                        <td> {{ data['failure_percentage'] }} </td>
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+        <div class="col-md-7" style="border-left:1px solid #00000075">
+            <h5>Change Configuration </h5>
+
+            <form method="post" action="/config">
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Number of workers</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" name="workers">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Average Delay in sec</label>
+                    <div class="col-sm-9">
+                        
+                        <input type="number" class="form-control" name="delay"  >
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-3 col-form-label">Failure percentage</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" name="failure_percentage">
+                    </div>
+                </div>
+                <div class="d-grid gap-2 col-4 mx-auto">
+                    <button class="btn btn-outline-success" type="submit">
+                        submit
+                    </button>
+                </div>
+            </form>
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
