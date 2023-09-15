@@ -1,4 +1,4 @@
-# backend-assessment
+# Load Balancer
 
 ## Live Link (can take 15-20 sec to load)
 https://load-balancer-2h12.onrender.com/
