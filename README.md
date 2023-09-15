@@ -1,6 +1,6 @@
 # backend-assessment
 
-## Live Link
+## Live Link (can take 15-20 sec to load)
 https://backend-assessment-8fof.onrender.com/
 
 ## Video Demo
