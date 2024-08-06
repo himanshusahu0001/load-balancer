@@ -1,5 +1,5 @@
 # Load Balancer
-**Live Link:** https://load-balancer.osc-fr1.scalingo.io/
+**Live Link:** https://load-balancer-2h12.onrender.com takes 1-2 minutes for the server to start
 
 **Tech Stack:** Python, Flask, Multiprocessing 
 * Developed a load balancer project using **Python** and **Flask**, effectively **distributing** incoming client **requests** to
